@@ -13,6 +13,7 @@ class Api {
     final response = await _client.get(
       ApiPath.categories,
     );
+
     return (response.data['data'] as List)
         .map((e) => Category.fromJson(e))
         .toList();
